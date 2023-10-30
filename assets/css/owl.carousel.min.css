@@ -59,8 +59,11 @@
     user-select:none
 }
 
-.owl-next  span,
-.owl-prev span { font-size: 0; }
+.owl-next > span,
+.owl-prev > span { 
+    display: flex;
+    font-size: 0;  
+}
 
 .owl-next > span::after{
     content: 'Next';
