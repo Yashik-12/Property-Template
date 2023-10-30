@@ -1338,7 +1338,6 @@ Footer Section Ends
         width: 100%;
         display: flex;
         justify-content: space-between;
-
     }
 
     .services-description {
@@ -1547,7 +1546,7 @@ Footer Section Ends
 
     .see-details-btn { width: 36%; }
 
-    .count { font-size: 32px; }
+    .count { font-size: 28px; }
 
     .agents-container li figure { left: 38%; }
 
