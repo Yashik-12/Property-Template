@@ -1,0 +1,1618 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* Force scrollbar */
+html {
+    overflow-y: scroll;
+    scroll-behavior:smooth;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+/* Align radios and text inputs with their label */
+input[type='radio'] {
+    vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+    cursor: pointer;
+}
+
+strong {
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+em {
+    font-style: italic;
+}
+
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: middle;
+}
+
+sub,
+sup {
+    vertical-align: baseline;
+    position: relative;
+    font-size: 55%;
+    line-height: 0;
+}
+
+sup {
+    top: -.7em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+.cf:before,
+.cf:after {
+    display: table;
+    content: " ";
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/*for all*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*for wrapper*/
+.wrapper {
+    max-width: 1360px;
+    width: 86%;
+    margin: 0 auto;
+}
+
+/* ===========================
+ Header Section Starts
+==============================*/
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.same-style{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+header .wrapper{
+    padding: 29px 2%;
+    border-radius: 8px;
+    background-color: #005555;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger { display: none; }
+
+.bar {
+    margin-top: 0;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    display: block;
+    background-color: #fff;
+    font-size: 0;
+    transition: all 0.3s;
+}
+  
+
+.header-common-style{
+    font-size: 25px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+}
+
+.navlists li { padding-right: 30px; }
+
+.navlists .common-styling{
+    color: #709D9D;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+}
+
+.dropdown{
+    font-family: 'FontAwesome';
+    font-weight: 600;
+    font-size: 0;
+}
+
+.dropdown::after{
+    margin-left: 5px;
+    color: #709D9D;
+    content: '\f107';
+    font-size: 11px;
+}
+
+/* ===========================
+ Header Section Ends
+==============================*/
+
+/* ===========================
+ Home Section Starts
+==============================*/
+.home-section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1600585153490-76fb20a32601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-section h2 {
+    margin-bottom: 30px;
+    width: 100%;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.home-section h2::first-letter { text-transform: capitalize; }
+
+form { width: 100%; }
+
+.home-search-input {
+    padding: 17px 4%;
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+    outline: none;
+    font-size: 17px;
+}
+
+.home-section-submit-btn {
+    padding: 17px 0;
+    border: 2px solid #005555;
+    border-radius: 50px;
+    margin-left: 1px;
+    background-color: #005555;
+    color: #fff;
+    width: 19%;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+
+.common-styling { text-transform: capitalize; }
+
+/* ===========================
+ Home Section Ends
+==============================*/
+
+/* ================================
+ Popular Properties Section Starts
+===================================*/
+
+.properties-section { margin-top: 90px; }
+
+.popular-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-header-container .common-styling {
+    color: #00204A;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.popular-header-container a {
+    padding: 17px 2%;
+    border: 2px solid #005555;
+    border-radius: 50px;
+    background-color: #005555;
+    color: #fff;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+
+.popular-header-container a::first-letter { text-transform: capitalize; }
+
+.properties-container { margin-top: 60px;}
+
+.property-lists { display: flex; }
+
+.property{ box-shadow: inset -1px 1px 0px 0px #f1eded, 0px 1px 0px #f1eded, inset 1px 0px 0px #f1eded; }
+
+.property-info { 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-price {
+    padding-bottom:10px;
+    border-bottom: 2px solid #005555;
+    color: #005555;
+    font-weight: 600;
+    font-size: 23px;
+    width: 32%;
+}
+
+.property-price::before { content: '\24'; }
+
+.address-1 {
+    margin-top: 10px;
+    color: #6d6a6a;
+    font-size: 15px;
+}
+
+.address-2 {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.two-bed-two-bath-container { 
+    margin-top: 20px;
+    font-size: 14px; 
+}
+
+.two-beds-icon { margin-right: 3%; }
+
+.two-beds-icon::before {
+    padding-right: 2%;
+    content: '\f236';
+    color: #7F7F7F;
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    gap: 3px;
+}
+
+.two-baths-icon::before {
+    padding-right: 2%;
+    color: #7F7F7F;
+    content: '\f2cd'; 
+    font-family: 'FontAwesome';
+    font-size: 18px;
+}
+
+.see-details-btn {
+    padding: 10px;
+    border: 2px solid #005555;
+    border-radius: 25px;
+    margin-top: 20px;
+    width: 40%;
+    background-color: #005555;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+}
+
+.active-slider { background-color:#00204A; }
+
+.prev-btn,
+.next-btn {
+    display: none;
+    padding: 10px 2%;
+    border-radius: 20px;
+    background-color: #E5E8EC;
+    color: #122F57;
+    font-size: 15px;
+    transition: all .3s ease-in-out;
+}
+
+/* ================================
+ Popular Properties Section Ends
+===================================*/
+
+/* =============================
+Property Details Section Starts 
+================================*/
+
+.property-detail-container { 
+    padding: 32px 4%;
+    margin-top: 102px;
+    background-color: #F2F4F6;
+}
+
+.property-detail-container .wrapper { width: 93%; }
+
+.property-detail-container .wrapper ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.property-items {
+    padding: 30px 2%;
+    margin-right: 2%;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.house-icon,
+.property-sale-icon,
+.real-estate-agent-icon,
+.house-sale-icon { 
+    display: flex; 
+    justify-content: center;
+    font-size: 0;
+}
+
+.common::after {
+    font-family: 'FontAwesome';
+    font-size: 45px;
+}
+
+.house-icon::after { content: '\f015'; }
+
+.property-sale-icon::after{ content: '\f1ad'; }
+
+.real-estate-agent-icon::after{ content: '\f015'; }
+
+.house-sale-icon::after{ content: '\e1b0'; }
+
+.property-items > .common-styling { 
+    padding-top: 20px;
+    color: #1f3e66;
+    font-weight: 600;
+    text-align: center;
+}
+
+.property-description{
+    padding-top: 20px;
+    color: #7F7F7F;
+    line-height: 20px;
+    text-align: center;
+}
+
+.learn-more-container {
+    color: #112F56;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.learn-more {
+    padding: 20px 0 9px;
+    border-bottom: 2px solid #214d4d;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+/* =============================
+Property Details Section Ends 
+================================*/
+  
+/* =============================
+Customer Says Section Starts
+================================*/
+.customer-section .wrapper { width: 85%; }
+
+.customer-header {
+    margin-top: 80px;
+    display: flex;
+}
+
+.customer-header .common-styling {
+    color: #00204A;
+    flex-basis: 85%;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.customer-header .prev-btn, .customer-header .next-btn {
+    padding:8px 2% ;
+    margin-right: 4px;
+    text-transform: capitalize;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.customer-says-list {
+    margin-top: 45px;
+    display: flex;
+}
+
+.common-circle-icon {
+    width: 85px;
+    min-height: 25%;
+}
+
+.common-circle-icon img{
+    border-radius: 50%;
+    height: 85px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.star {
+    font-size: 0;
+    color: #FFC108;
+}
+
+.star::after {
+    content: '\f005';
+    font-family: 'FontAwesome';
+    font-size: 12px;
+}
+
+.star-container { margin-top: 20px; }
+
+.customer-says-description { 
+    margin: 25px 0 15px;
+    width: 88%;
+    line-height: 23px;
+    font-size: 14px;
+}
+
+.designation {
+    color: #969696;    
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.customer-says-slider-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.customer-says-content .common-styling { 
+    margin-top: 5px;
+    font-weight: 600;
+    color: #00204A;
+    font-size: 20px;
+}
+
+/* =============================
+Customer Says Section Ends
+================================*/
+
+/* =============================
+Services Section Starts
+================================*/
+.services-section { 
+    margin-top:70px; 
+    background-color: #F2F4F6;
+}
+
+.services-section .wrapper { width: 90%; }
+
+.services-section .wrapper h3 {
+    width: 30%;
+    text-align:center;
+    font-size: 30px;
+    color: #00204A;
+    font-weight: 600;
+}
+
+.services-header-container {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.services-section .wrapper h3::first-letter { text-transform: capitalize; }
+
+.description-container {
+    display: flex;
+    justify-content: center;
+}
+
+.services-description {
+    margin-top: 25px;
+    width: 35%;
+    line-height: 23px;
+    text-align: center;
+    font-size: 15px;
+    color: #6d6a6a;
+}
+
+.services-main-container { display: flex; }
+
+.first-container { 
+    padding: 12px 0; 
+    flex-basis: 60%;
+ }
+
+.first-container,.second-container { margin-top: 70px; }
+
+.services-content { 
+    margin-bottom: 30px;
+    display: flex;
+ }
+
+.services-block { margin-bottom: 50px; }
+
+.services-block h4 { 
+    color: #00204A;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.services-content-info {
+    margin-top: 10px;
+    width: 67%;  
+    color: #A9A9AA;
+    line-height: 22px;
+}
+
+.home-icon,
+.account-icon,
+.legit-icon { 
+    font-size: 0; 
+    margin:20px 5%;
+ }
+
+.home-icon::after { content: '\f015'; }
+
+.account-icon::after { content: '\f007'; }
+
+.legit-icon::after { content: '\f3ed'; }
+
+.services-section-common::after {
+    padding:35px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-family: 'FontAwesome';
+    background-color: #EFEFEF;
+}
+
+.second-container { flex-basis: 80%; }
+
+.second-container figure {
+    width: 100%;
+    height: 100%;
+}
+
+.second-container figure img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.countdown-container {
+    padding-bottom: 70px;
+    margin: 40px 7% 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.countdown-container li {
+    display: flex;
+    flex: 0 0 20%;
+}
+
+.counter-content { 
+    display: flex; 
+    flex-direction: column;
+}
+
+.count,
+.count-info{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.count { 
+    color: #00204A;
+    font-size: 45px; 
+    font-weight: 600;
+}
+
+.count-info {
+    margin-top: 6px;
+    color: #A4A4A5;
+    font-size: 14px;
+}
+
+.count-info::before {
+    margin: 15px 3px 0 15px;
+    content: '\23';
+}
+
+/* =============================
+Services Section Ends
+================================*/
+
+/* =======================================
+Growing Real Estate agents section starts
+==========================================*/
+
+.growing-real-estate { margin-top: 70px; }
+
+.growing-real-estate .wrapper { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.real-estate-heading { 
+    color: #00204A;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.growing-real-estate .wrapper a {
+    padding: 15px 3%;
+    border: 2px solid #005555;
+    border-radius: 35px;
+    margin-top: 20px;
+    background-color: #005555;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.real-estate-heading::first-letter,
+.growing-real-estate .wrapper a::first-letter { text-transform: capitalize; }
+
+/* =======================================
+Growing Real Estate agents section Ends
+==========================================*/
+
+/* =============================
+Agents Section Starts
+================================*/
+.agents-section { 
+    margin-top: 85px;
+    background-color: #F8F9FA;
+}
+
+.agents-section .wrapper { width: 90%;}
+
+.agents-heading-container {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.agents-heading-container .common-styling {
+    font-size: 30px;
+    color: #00204A;
+    font-weight: 600;
+}
+
+.agents-para-container {
+  display: flex;
+  justify-content: center;
+}
+
+.agents-heading-para {
+    margin-top: 25px;
+    width: 43%;
+    color: #6d6a6a;
+    display: flex;
+    justify-content: center;
+    line-height: 23px;
+    text-align: center;
+}
+
+.agents-container {
+    margin-top: 105px;
+    margin-left: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.agents-container li { position: relative; }
+
+.agents-list {
+    margin-bottom: 60px;
+    background-color: #fff;
+    margin-right: 8%;
+}
+
+.agents-container li figure {
+    position: absolute;
+    left: 36%;
+    top: -42px;
+}
+
+.agents-container li h4 {
+    padding-top: 72px;
+    color: #00204A;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.agents-designation { 
+    margin-top: 3px;
+    color: #6d6a6a;
+    display: flex; 
+    justify-content: center;
+    font-size: 14px;
+}
+
+.agents-description {
+    padding: 20px;
+    color: #7F7F7F;
+    text-align: center;
+    line-height: 22px
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 18% 45px 18%;
+}
+
+.twitter,
+.facebook,
+.linkedin,
+.instagram,
+.pinterest,
+.basketball { font-size: 0; }
+
+.twitter::after { content: '\f099'; }
+
+.facebook::after { content: '\f39e'; }
+
+.linkedin::after { content: '\f0e1'; }
+
+.instagram::after { content: '\f16d'; }
+
+.pinterest::after { content: '\f0d2'; }
+
+.basketball::after { content: '\f434'; }
+
+.social-icon-common::after{
+    padding: 13px 15px;
+    border: 2px solid #00204A;
+    border-radius: 50%;
+    background-color:#00204A; 
+    color: #fff;
+    font-family: 'FontAwesome';
+    font-size: 12px;
+    transition: all .3s ease-in-out;
+} 
+
+/* =============================
+Agents Section Ends
+================================*/
+
+/* =============================
+Footer Section Starts
+================================*/
+
+footer{ 
+    padding-top: 60px;
+    background-color: #EFEFEF; 
+}
+
+.footer-container { display: flex; }
+
+.footer-item h5 {
+    color: #00204A;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.footer-item ul {
+    margin-top: 12px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item-content { 
+    margin-left: 1%;
+    flex-basis: 35%; 
+}
+
+.footer-item-content-second { flex-basis: 13%;}
+
+.footer-item-content-last { 
+    padding-left: 5%;
+    flex-basis:35%;
+}
+
+.footer-item .items{ margin-top: 30px; }
+
+.inner-content li a{ 
+    color: #6d6a6a; 
+    line-height: 30px;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
+.list { margin-top: 12px;}
+
+.address {
+    margin-top: 10px;
+    color: #6d6a6a; 
+}
+
+.footer-social-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-icons-common::after{
+    color: #777;
+    font-size: 12px; 
+    font-family: 'FontAwesome';
+}
+
+.footer-social-icons-common {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-right: 2%;
+    background-color: #ccc;
+    transition: all .3s ease-in-out;
+}
+
+.icon-content{
+    width: 80%;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-bottom-para {
+    margin-top: 40px;
+    width: 50%;
+    line-height: 30px;
+}
+
+.footer-bottom-conatiner {
+    padding-bottom: 100px;
+    margin-top: 30px;
+    color: #6d6a6a; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-bottom-para a { 
+    text-decoration: underline;
+    color: #6d6a6a; 
+    transition: all .3s ease-in-out;
+}
+
+.footer-bottom-para .untree { 
+    margin-left:6px; 
+    color: #6d6a6a; 
+}
+
+/* =============================
+Footer Section Ends
+================================*/
+
+/* Media Queries */
+
+@media only screen and (min-width: 995px){
+
+    .header-common-style:hover { color: #b9b0b0;}
+
+    .navlists .common-styling:hover { color: #fff; }
+
+    .home-section-submit-btn:hover,
+    .popular-header-container a:hover,
+    .see-details-btn:hover,
+    .growing-real-estate .wrapper a:hover {
+        background-color: #fff;
+        color: #005555;
+    }
+    
+    .home-section-submit-btn:active,
+    .popular-header-container a:active,
+    .see-details-btn:active,
+    .prev-btn:active,
+    .next-btn:active,
+    .growing-real-estate .wrapper a:active,
+    .owl-nav button.owl-next:active,
+    .owl-nav button.owl-prev:active{ scale: .9; }
+
+    .prev-btn:hover,
+    .next-btn:hover,
+    .owl-nav button.owl-next:hover,
+    .owl-nav button.owl-next:hover {
+        background-color: #00204A;
+        color: #E5E8EC;
+    }
+
+    .social-icon-common:hover::after{ 
+        background-color: #fff;
+        color: #00204A;
+    }
+
+    .inner-content li a:hover { 
+        color: #000;
+        font-weight: 600;
+    }
+
+    .footer-bottom-para a:hover { color:#000; }
+
+    .footer-social-icons-common:hover { background-color: #EFEFEF; }
+}
+
+@media only screen and (max-width: 1920px){
+    .customer-says-description {
+        width: 85%;
+        font-size: 16px;
+    }
+
+    .designation, 
+    .learn-more { font-size: 15px; }
+
+    .services-description {
+        width: 40%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .property-items > .common-styling { font-size: 18px; }
+    
+    .services-content-info {
+       width: 65%;
+       font-size: 17px;
+    }
+
+    .services-block h4,
+    .agents-container li h4  { font-size: 20px; }
+
+    .agents-heading-para {     
+        width: 48%;
+        font-size: 20px;
+    }
+
+    .count-info,
+    .social-icon-common::after { font-size: 16px; }
+
+    .agents-container li figure { left: 37%; }
+
+    .agents-designation {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .agents-description { 
+        font-size: 18px;
+        line-height: 26px;
+     }
+}
+
+@media only screen and (max-width: 1440px){
+
+    .customer-says-description { width: 90%; }
+
+    .services-description {
+        width: 35%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .services-content-info { width: 70%; }
+
+    .agents-heading-para {
+        width: 40%;
+        font-size: 16px;
+    }
+
+    .agents-description { font-size: 17px; }
+}
+
+@media only screen and (max-width: 1366px){
+    
+    .services-content-info { width: 75%; }
+
+    .agents-heading-para {
+        width: 45%;
+        font-size: 16px;
+    }
+    
+    .customer-says-description { width: 100%;}
+
+    .agents-description { font-size: 16px; }
+
+    .agents-container li figure { left: 37%; }
+
+    .social-icons { padding: 20px 16% 45px 16%; }
+}
+
+@media only screen and (max-width: 1024px){
+    
+    .see-details-btn { width: 50%; }
+
+    .property-items > .common-styling { font-size: 16px; }
+
+    .property-description { font-size: 13px; }
+    
+    .learn-more { font-size: 12px; }
+
+    .customer-says-description { 
+        width: 90%; 
+        font-size: 15px;
+    }
+
+    .services-section .wrapper h3 { width: 45%; }
+
+    .services-description { width: 45%; }
+
+    .services-block h4, .agents-container li h4 { font-size: 18px; }
+
+    .services-content-info {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    .count { font-size: 40px; }
+
+    .agents-heading-para { width: 60%; }
+
+    .services-block h4, .agents-container li h4 { font-size: 16px; }
+
+    .agents-container li figure { left: 36%; }
+
+    .agents-description { font-size: 15px; }
+
+    .social-icon-common::after { font-size: 14px; }
+
+    .social-icons { padding: 20px 10% 45px 10%; }
+
+    .social-icon-common::after { padding: 10px 13px; }
+
+    .icon-content { width: 100%; }
+
+    .agents-description { line-height: 19px; }
+}
+
+@media only screen and (max-width: 995px) { .agents-container li figure { left: 36%; } }
+
+@media only screen and (max-width:768px){
+
+    .html-scroll {overflow-y: hidden;}
+
+    header .wrapper { 
+        width: 100%; 
+        top: 0;
+    }
+
+    .navlists li { padding:0; }
+
+    .hamburger{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 32px;
+        right: 5%;
+    }
+
+    .navlists .common-styling {
+        color: #fff;
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: 500;
+        transition: all .3s ease-in-out;
+        margin-bottom: 50px;
+    }
+
+    nav .active-nav {transform: translateY(0);}
+
+    .navlists > li:hover::after {width: 0;}
+
+    .hamburger.active .bar:nth-child(2) {opacity: 0;}
+        
+    .hamburger.active .bar:nth-child(1) {transform: translateY(7px) rotate(45deg);}
+    
+    .hamburger.active .bar:nth-child(3) {transform: translateY(-6px) rotate(-45deg);}
+
+    .navlists{
+        padding: 70px 2%;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #005555;
+        transform: translateY(-100%);
+        transition: all .5s ease-in-out;
+    }   
+
+    .navlists li:not(:last-child){ margin-bottom: 30px; }
+
+    .header-common-style { margin-left: 10%; }
+
+    .dropdown::after { 
+        margin:0;
+        font-size: 20px;
+    }
+
+    .home-section h2 {
+        margin-bottom: 18px;
+        font-size: 35px;
+    }
+
+    form { display: flex; }
+    
+    .home-search-input {
+        padding: 12px 4%;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .home-section-submit-btn {
+        padding: 18px 0;
+        width: 34%;
+        font-size: 20px;
+        margin-left: 1%;
+    }
+    .home-section .wrapper { text-align: center; }
+
+    .property-detail-container .wrapper ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .see-details-btn {
+        width: 50%;
+        padding: 13px;
+        white-space: nowrap;
+    }
+
+    .property-items { 
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+    .property-items > .common-styling { font-size: 20px; }
+
+    .property-description { font-size: 18px; }
+
+    .learn-more,
+    .customer-says-description { font-size: 17px; }
+
+    .count-info { font-size: 13px; }
+
+    .services-main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second-container,.services-content { margin: 0; }
+
+    .countdown-container {
+        padding-bottom: 55px;
+        margin-top:50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .services-description {
+        width: 65%;
+        font-size: 18px;
+    }
+
+    .agents-heading-para {
+        width: 83%;
+        font-size: 18px;
+    }
+
+    .services-section-common::after {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next, 
+    .owl-carousel .owl-nav button.owl-prev { padding: 10px 6%; }
+
+    .services-block h4, 
+    .agents-container li h4 { font-size: 20px; }
+
+    .services-content-info {
+        width: 85%;
+        font-size: 18px;
+    }
+
+    .agents-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0;
+    }
+ 
+    .agents-list { margin-right: 0; }
+
+    .agents-container li {  width: 75%; }
+
+    .agents-container li figure { left: 43%; }
+
+    .agents-description { font-size: 16px; }
+
+    .agents-section .wrapper { width: 100%; }
+
+    .social-icons {
+        padding: 20px 27% 75px 27%;
+        text-align: center;
+    }
+
+    .social-icon-common::after { padding: 13px 15px; }
+
+    .social-icon-common::after { font-size: 12px; }
+
+    .footer .wrapper { width: 100%; }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+    }
+
+    .footer-item-content {
+        margin-left: 5%;
+        flex-basis: 45%;
+    }
+
+    .footer-item ul { font-size: 16px; }
+
+    .footer-social-icons-common::after {
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-item-content-second {
+        margin-left: 3%;
+        flex-basis: 17%;
+    }
+
+    .footer-social-icons-common {
+        padding: 12px 12px;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        margin-right: 2%;
+        background-color: #ccc;
+        transition: all .3s ease-in-out;
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width:640px){
+
+    .home-section-submit-btn {
+        padding: 12px 0;
+        width: 25%;
+    }
+
+    .home-search-input { font-size: 17px; }
+
+    .popular-header-container a {
+        padding: 11px 3%;
+        font-size: 17px;
+    }
+
+    .see-details-btn { width: 60%; }
+
+    .services-section .wrapper h3 { width: 75%; }
+
+    .services-description { width: 70%; }
+
+    .real-estate-heading { text-align: center; font-size: 25px; }
+
+    .agents-heading-para { width: 85%; }
+
+    .agents-container li figure { left: 42%; }
+
+    footer { padding: 0; }
+
+    .footer-bottom-para {  width: 100%; }
+
+    .social-icons { padding: 20px 10% 60px 10%; }
+
+    .agents-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .agents-container li {  width: 85%; }
+
+    .footer-item-content-second {
+        margin-left: 5%;
+        flex-basis: 33%;
+        margin-top: 2px;
+    }
+
+    .footer-item-content-last {
+        padding-left: 7%;
+        flex-basis: 33%;
+        margin-top: 6pxx;
+        margin-top: 42px;
+    }
+
+    .footer-item-content {
+        margin-left: 5%;
+        flex-basis: 35%;
+    }
+}
+
+@media only screen and (max-width:560px){
+
+    .home-section-submit-btn { width: 28%; }
+
+    .popular-header-container {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    .popular-header-container a { margin-top: 20px; }
+
+    .see-details-btn { width: 30%; }
+
+    .agents-container li figure { left: 41%; }
+
+    .social-icons {
+        padding: 21px 6% 56px 6%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:480px){
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-section-submit-btn {
+        width: 45%;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+    .property-items {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .footer-item-content-second {
+        margin-left: 5%;
+        flex-basis: 33%;
+        margin-top: 45px;
+    }
+
+    .footer-item-content { flex-basis: 60%; }
+
+    .social-icons { padding: 21px 16% 55px 16%; }
+
+    .see-details-btn { width: 36%; }
+
+    .count { font-size: 32px; }
+
+    .agents-container li figure { left: 38%; }
+
+    .agents-heading-para,
+    .services-description { width: 90%; }
+
+    .agents-container li {  width: 85%; }
+
+    .footer-item-content-last { padding-left: 5%; }
+
+    .footer-item ul { font-size: 13px; }
+}
+
+@media only screen and (max-width:375px){
+
+    .home-section h2 {
+        margin-bottom: 18px;
+        font-size: 28px;
+    }
+
+    .navlists .common-styling { font-size: 21px; }
+
+    .see-details-btn { width: 45%; }
+
+    .services-section .wrapper h3,
+    .real-estate-heading { font-size: 25px; width: 100%; }
+
+    .services-header-container { padding-top: 50px; }
+
+    .services-description,  
+    .services-block h4, 
+    .agents-container li h4, 
+    .home-search-input,
+    .services-block h4,
+    .agents-container li h4 { font-size: 16px; }
+
+    .services-section-common::after {
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    .countdown-container { padding-bottom: 35px; }
+
+    .agents-container li figure { left: 37%; }
+
+    .count-info { font-size: 12px; }
+
+    .agents-heading-para {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .agents-description { font-size: 14px; }
+    .agents-container li figure { left: 31%; }
+
+    .social-icon-common::after { padding: 11px 13px; }
+
+    .count { font-size: 25px; }
+
+    .growing-real-estate .wrapper a { padding: 13px 5%; }
+
+    .popular-header-container a {
+        padding: 9px 5%;
+        font-size: 17px;
+    }
+
+    .footer-item ul { font-size: 14px; }
+}
