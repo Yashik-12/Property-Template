@@ -203,7 +203,7 @@ li {
 /* ===========================
  Header Section Starts
 ==============================*/
-header{
+header {
     display: flex;
     justify-content: center;
 }
@@ -1217,6 +1217,14 @@ Footer Section Ends
 
 @media only screen and (max-width:768px){
 
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
     .html-scroll {overflow-y: hidden;}
 
     header .wrapper { 
@@ -1226,7 +1234,7 @@ Footer Section Ends
 
     .navlists li { padding:0; }
 
-    .hamburger{
+    .hamburger {
         display: block;
         position: absolute;
         z-index: 1;
