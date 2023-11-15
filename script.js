@@ -61,36 +61,47 @@ window.addEventListener('load', () => {
     // Counter Logic
     let activated = false;
     const updateCount = (countElem) => {
-            const speed = 400,
-                endVal = +countElem.getAttribute("data-count"),
-                startVal = +countElem.innerText,
-                increment = Math.trunc(endVal / speed);
-            if (startVal < endVal) {
-                countElem.innerText = startVal + increment;
-                setTimeout(() => updateCount(countElem));
-            } else {
-                countElem.innerText = endVal;
-            }
-        };
+        const speed = 400,
+            endVal = +countElem.getAttribute("data-count"),
+            startVal = +countElem.innerText,
+            increment = Math.trunc(endVal / speed);
+        if (startVal < endVal) {
+            countElem.innerText = startVal + increment;
+            setTimeout(() => updateCount(countElem));
+        } else {
+            countElem.innerText = endVal;
+        }
+    };
 
-        const counterVisible = () => {
-            if (scrollY > countContainer.offsetTop - countContainer.offsetHeight - 900 && activated === false) {
-                counts.forEach(countElem => {
-                    countElem.innerText = 0;
-                    updateCount(countElem);
-                });
-                activated = true;
-            } else if (scrollY < countContainer.offsetTop - countContainer.offsetHeight - 900 || scrollY === 0 && activated === true) {
-                counts.forEach(countElem => {
-                    countElem.innerText = 0;
-                });
-                activated = false;
-            }
-        };
-        
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > countContainer.offsetTop-400 ){
-                counterVisible();
-            }
-        });
+    const counterVisible = () => {
+        if (scrollY > countContainer.offsetTop - countContainer.offsetHeight - 900 && activated === false) {
+            counts.forEach(countElem => {
+                countElem.innerText = 0;
+                updateCount(countElem);
+            });
+            activated = true;
+        } else if (scrollY < countContainer.offsetTop - countContainer.offsetHeight - 900 || scrollY === 0 && activated === true) {
+            counts.forEach(countElem => {
+                countElem.innerText = 0;
+            });
+            activated = false;
+        }
+    };
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > countContainer.offsetTop - 400) {
+            counterVisible();
+        }
+    });
+
+
+    /*===== SCROLL REVEAL ANIMATION =====*/
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2000,
+        delay: 200,
+    });
+
+    sr.reveal('.wrapper', {});
 });
